@@ -1,0 +1,69 @@
+1.Using the touch command, create empty files called foo and bar in yourrepository directory
+
+Answer: touch foo.txt bar.txt // creating foo and bar files in Exercise1.3.1 directory
+ 
+2.By using git add foo, add foo to the staging area. Confirm with git status that it worked.
+
+Answer: git add foo.txt
+	git status
+	
+	On branch master
+	Changes to be committed:
+	  (use "git restore --staged <file>..." to unstage)
+		new file:   foo.txt
+
+	Untracked files:
+	  (use "git add <file>..." to include in what will be committed)
+		bar.txt
+
+
+3. Using git commit -m and an appropriate message, add foo to the repository.
+
+Answer: git commit -m "Add foo files in the repos"
+	[master a1ec393] Adding foo files in the repos
+ 	1 file changed, 0 insertions(+), 0 deletions(-)
+ 	create mode 100644 Exercise1.3.1/foo.txt
+
+4. By using git add bar, add bar to the staging area. Confirm with git status that it worked.
+
+Answer: git add bar.txt
+	git status
+	
+	On branch master
+	Changes to be committed:
+  	   (use "git restore --staged <file>..." to unstage)
+	        new file:   bar.txt
+
+
+5. Now run git commit without the -m option. Use your Vim knowledge to add the message “Add bar”, save, and quit.
+
+Answer: git commit -m "Add bar files in the repos"
+	[master 5d8c434] Add bar files in the repos
+	 1 file changed, 0 insertions(+), 0 deletions(-)
+	 create mode 100644 Exercise1.3.1/bar.txt
+
+
+6. Using git log, confirm that the commits made in the previous exercises worked correctly.
+
+Answer: git log
+	commit 5d8c43472b62d40d81d6861c012a9ae8772f7278 (HEAD -> master)
+	Author: codeask10 <annajmussaquib123@gmail.com>
+	Date:   Tue Aug 27 16:10:37 2024 +0530
+
+	    Add bar files into the repos
+
+	commit a1ec3936d25eb083f39637ed2275f8d9f03fc7cf
+	Author: codeask10 <annajmussaquib123@gmail.com>
+	Date:   Tue Aug 27 16:09:48 2024 +0530
+
+	    Adding foo files in the repos
+
+	commit 775cd7cb0c357758c799e307d25d86812d2c59db
+	Author: codeask10 <annajmussaquib123@gmail.com>
+	Date:   Tue Aug 27 16:06:29 2024 +0530
+
+	    Initialize repository
+
+
+
+

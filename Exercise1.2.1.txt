@@ -1,0 +1,13 @@
+Answer 1: By running ls -a command, the hidden directory used by the Git repository is .git. This directory is automatically created when  initialize a Git repository with git init.
+
+Answer 2 : The main Git configuration file is config. I can view its contents using: cat .git/config command.
+	
+After running cat .git/config in the terminal, the output shows the core settings of the Git repository, including:
+
+    repositoryformatversion = 0
+    filemode = true
+    bare = false
+    logallrefupdates = true
+
+
+

@@ -1,0 +1,45 @@
+1.Use touch to create an empty file called baz. What happens if you run git commit -am "Add baz"?
+
+Answer: The command git commit -am "Add baz" will not commit the new baz file because it has not been added to the staging area yet. When I run git commit -am "Add baz", It shows: 
+
+		On branch master
+		Untracked files:
+		  (use "git add <file>..." to include in what will be committed)
+			baz
+
+		nothing added to commit but untracked files present (use "git add" to track)
+
+
+
+2.Add baz to the staging area using git add -A, then commit with the message "Add bazz".
+
+Answer: git add -A
+	git commit -m "Add bazz"
+	
+	[master 5288957] Add bazz
+ 	 1 file changed, 0 insertions(+), 0 deletions(-)
+         create mode 100644 baz
+
+3.Realizing there’s a typo in your commit message, change bazz to baz using git commit --amend.
+
+Answer: git commit --amend -m  "Add baz"
+
+	[master ac5de51] Add baz
+	 Date: Tue Aug 27 16:33:46 2024 +0530
+	 1 file changed, 0 insertions(+), 0 deletions(-)
+	 create mode 100644 baz
+
+4.Run git log to get the SHA of the last commit, then view the diff using git show <SHA> to verify that the message was amended properly.
+
+Answer: git show ac5de5153c897ea8493268f77b16ec494ec2ffa6
+
+	commit ac5de5153c897ea8493268f77b16ec494ec2ffa6 (HEAD -> master)
+	Author: codeask10 <annajmussaquib123@gmail.com>
+	Date:   Tue Aug 27 16:33:46 2024 +0530
+
+	    Add baz
+
+	diff --git a/baz b/baz
+	new file mode 100644
+	index 0000000..e69de29
+
